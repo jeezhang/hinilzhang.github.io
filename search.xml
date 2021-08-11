@@ -15,17 +15,7 @@
   <entry>
     <title>Github搭建Hexo博客的步骤</title>
     <url>/2021/08/11/hexo/</url>
-    <content><![CDATA[<h1 id="0-Github搭建Hexo博客的步骤"><a href="#0-Github搭建Hexo博客的步骤" class="headerlink" title="0. Github搭建Hexo博客的步骤"></a>0. Github搭建Hexo博客的步骤</h1><ol>
-<li>安装Node.js</li>
-<li>安装、配置Git</li>
-<li>安装Hexo</li>
-<li>运行测试</li>
-<li>将博客部署到GitHub上</li>
-<li>博客备份</li>
-<li>hexo命令</li>
-<li>hexo 新建文章头部示例</li>
-</ol>
-<h1 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1. 安装Node.js"></a>1. 安装Node.js</h1><ul>
+    <content><![CDATA[<h1 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1. 安装Node.js"></a>1. 安装Node.js</h1><ul>
 <li>下载：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a> (官网，建议选择LTS版本)</li>
 <li>安装：一路next</li>
 </ul>
@@ -88,20 +78,20 @@
 <p><img src="/images/hexo/hexo-init.png" alt></p>
 </li>
 <li><p>本地预览</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo s <span class="comment"># 启动服务</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo s <span class="comment"># 启动服务器</span></span></span><br></pre></td></tr></table></figure>
 
 <p><code>hexo s</code>是开启本地预览服务，打开浏览器访问 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000</a> 即可看到内容。</p>
 </li>
 </ol>
 <ol start="3">
 <li><p>生成静态文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo g # 生成</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo g # 生成静态文件</span><br></pre></td></tr></table></figure>
 
 <p>执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的。</p>
 </li>
 <li><p>运行测试</p>
 <p>新建一个markdown ，用markdown进行编写</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo cl    # 用来清理缓存文件(cl = clean)</span><br><span class="line">hexo s     # 运行本地服务器</span><br><span class="line">hexo g     # 生成文件</span><br><span class="line">hexo d     # 上传到服务器</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo cl    # 清除缓存文件 (db.json) 和已生成的静态文件 (public)。(cl = clean)</span><br><span class="line">hexo s     # 运行本地服务器</span><br><span class="line">hexo g     # 生成静态文件</span><br><span class="line">hexo d     # 部署网站。部署网站前，需要预先生成静态文件。</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
@@ -167,7 +157,7 @@
 </ol>
 <h1 id="8-无脑操作步骤"><a href="#8-无脑操作步骤" class="headerlink" title="8. 无脑操作步骤"></a>8. 无脑操作步骤</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">##### 安装 hexo ######</span></span></span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果网络很慢，可以执行以下命令</span></span><br><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.orgc</span><br><span class="line">cnpm install hexo-cli -g</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">##### 博客初始化 ######</span></span></span><br><span class="line">hexo init myblog # 在本地生成hexo模板，Hexo自动在当前文件夹下下载搭建网站所需的所有文件</span><br><span class="line">npm install      # 安装依赖包</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装插件</span></span><br><span class="line">npm install hexo-deployer-git --save            # 自动部署插件 </span><br><span class="line">npm install hexo-generator-searchdb --save      # 开启本地搜索</span><br><span class="line">npm install hexo-generator-sitemap --save       # 提交搜索引擎</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save # 提交搜索引擎</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">##### 博客ing ######</span></span></span><br><span class="line">hexo s           # 完整命令为hexo server，启动服务器，用来本地预览</span><br><span class="line">hexo g           # 完整命令为hexo generate，生成静态文件</span><br><span class="line">hexo d           # 部署</span><br></pre></td></tr></table></figure>
 
-<h1 id="9-Hexo命令"><a href="#9-Hexo命令" class="headerlink" title="9. Hexo命令"></a>9. Hexo命令</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new "postName"      # 新建文章</span><br><span class="line">hexo new page "pageName" # 新建页面</span><br><span class="line"></span><br><span class="line">hexo g[generate]         # 生成博客网页文件至public目录</span><br><span class="line">hexo s[server]           # 本地预览博客</span><br><span class="line">hexo d[deploy]           # 上传网页文件到github</span><br><span class="line">hexo cl[clean]           # 清空本地缓存，解决由于本地缓存导致部署无效</span><br></pre></td></tr></table></figure>
+<h1 id="9-Hexo命令"><a href="#9-Hexo命令" class="headerlink" title="9. Hexo命令"></a>9. Hexo命令</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new "postName"      # 新建文章</span><br><span class="line">hexo new page "pageName" # 新建页面</span><br><span class="line"></span><br><span class="line">hexo g[generate]         # 生成博客网页静态文件至public目录</span><br><span class="line">hexo s[server]           # 启动服务器，实现本地预览博客</span><br><span class="line">hexo d[deploy]           # 部署网站。部署网站前，需要预先生成静态文件。</span><br><span class="line">hexo cl[clean]           # 清除缓存文件 (db.json) 和已生成的静态文件 (public)，解决由于本地缓存导致部署无效</span><br></pre></td></tr></table></figure>
 
 <h1 id="10-Hexo新建文章头部示例"><a href="#10-Hexo新建文章头部示例" class="headerlink" title="10. Hexo新建文章头部示例"></a>10. Hexo新建文章头部示例</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: [tag1, tag2, ...]</span><br><span class="line"><span class="meta">#</span><span class="bash">tags: </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> - tag1 </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> - tag2</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> - ...</span></span><br><span class="line">categories: [category1, category2, ...]</span><br><span class="line"><span class="meta">#</span><span class="bash">categories: </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> - category1</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> - category2</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> - ...</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
