@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>hinil-blog</title>
+  
+  <subtitle>Now is better than never</subtitle>
+  <link href="https://hinilzhang.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://hinilzhang.github.io/"/>
+  <updated>2021-08-11T05:48:25.795Z</updated>
+  <id>https://hinilzhang.github.io/</id>
+  
+  <author>
+    <name>zhangjie</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://hinilzhang.github.io/2021/08/11/helloworld/"/>
+    <id>https://hinilzhang.github.io/2021/08/11/helloworld/</id>
+    <published>2021-08-11T05:43:20.000Z</published>
+    <updated>2021-08-11T05:48:25.795Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hello World!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Hello World!&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://hinilzhang.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://hinilzhang.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
